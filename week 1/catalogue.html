@@ -1,0 +1,85 @@
+
+
+
+
+<script type="text/javascript">
+function validate()
+{
+window.alert("Book added to cart!");
+}
+</script>
+<h3 align="center">Books</h3>
+<form action="cart.html" method="post">
+<table align="center" border="1" width="650">
+<tr>
+<th width="150">Name</th>
+<th>Logo</th>
+<th>Author</th>
+<th>Publication</th>
+<th>Price</th>
+<th>Cart</th>
+</tr>
+<tr align="center">
+<td>XML Bible</td>
+<td><img src="images/xmlbiblecover.jpg" width="75" height="90" /></td>
+<td>Elliotte Rusty Harold</td>
+<td>Hungry Minds</td>
+<td> $21.99</td>
+<td><input type="submit" onClick="validate();" value="Add to cart"></td>
+</tr>
+<tr align="center">
+<td>Artificial Intelligence: A Modern Approach </td>
+<td><img src="images/AI.jpg" width="80" height="90" /></td>
+<td>Stuart J. Russell</td>
+<td>Princeton Hall</td>
+<td> $36.09</td>
+<td><input type="submit" onClick="validate();" value="Add to cart"></td>
+</tr>
+<tr align="center">
+<td>Beginning Java 2</td>
+<td><img src="images/java.jpg" width="75" height="90" /></td>
+<td>Ivor Horton</td>
+<td>wrox</td>
+<td> $8.95</td>
+<td><input type="submit" onClick="validate();" value="Add to cart"></td>
+</tr>
+<tr align="center">
+<td>HTML5: Up and Running</td>
+<td><img src="images/HTML5-Up-And-Running.jpg" width="75" height="90" /></td>
+<td>Mark Pilgrim</td>
+<td>O'REILLY</td>
+<td> $17.99</td>
+<td><input type="submit" onClick="validate();" value="Add to cart"></td>
+</tr>
+</table>
+</form>
+cart.html
+
+<h4 align="center">Shopping Cart</h4>
+<table align="center" border="1" width="400">
+<tr>
+<th>Book Name</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Amount</th>
+</tr>
+<tr align="center">
+<td>XML Bible</td>
+<td> $21.99</td>
+<td>2</td>
+<td> $43.98</td>
+</tr>
+<tr align="center">
+<td>HTML5: Up and Running</td>
+<td> $17.99</td>
+<td>1</td>
+
+
+<td> $17.99</td>
+</tr>
+<tr align="center">
+<td colspan="3">Total Amount:</td>
+<td> $61.97</td>
+</tr>
+</table>
+

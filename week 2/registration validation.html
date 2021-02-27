@@ -1,0 +1,118 @@
+WEEK 2
+Aim:
+          A  HTML Program to Validate the Registration Page.
+
+PROGRAM:
+
+<html>
+<head>
+<title> Registration</title>
+<script type="text/javascript">
+function validate()
+{
+re = /^[A-Za-z]+$/;
+if(!re.test(document.registration.name.value))
+{
+window.alert('Invalid Name.');
+}
+if(document.registration.pass.value.length<=6)
+{
+window.alert('Password is too short!');
+}
+if(document.registration.ph_no.value.length<10)
+{
+window.alert('Phone number not valid!');
+}
+var x=document.forms["registration"]["email"].value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if(atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+{
+window.alert("Invalid email!");
+}
+}
+</script>
+</head>
+
+
+
+
+<body>
+<h4 align="center">Registration</h4>
+<form name="registration" method="post" action="Registration.html">
+<table align="center" height="450">
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name" id="name" /></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="pass" id="pass" /></td>
+</tr>
+<tr>
+<td>E-mail ID:</td>
+<td><input type="text" name="email" /></td>
+</tr>
+<tr>
+<td>Phone number:</td>
+<td><input type="text" name="ph_no" /></td>
+</tr>
+<tr>
+<td>Sex:</td>
+<td><input type="radio" name="sex" value="male" /> Male
+<input type="radio" name="sex" value="female" /> Female</td>
+</tr>
+<tr>
+<td>Date of Birth (D M Y):</td>
+<td>
+<select>
+  <option value="1" name="d">1</option>  <option value="2" name="d">2</option>
+  <option value="3" name="d">3</option>  <option value="4" name="d">4</option>
+  <option value="5" name="d">5</option>  <option value="6" name="d">6</option>
+  <option value="7" name="d">7</option>  <option value="8" name="d">8</option>
+  <option value="9" name="d">9</option>  <option value="10" name="d">10</option>
+  <option value="12" name="d">12</option>  <option value="13" 
+name="d">13</option>
+  <option value="14" name="d">14</option>  <option value="15" name="d">15</option>
+  <option value="16" name="d">16</option>  <option value="17" name="d">17</option>
+  <option value="18" name="d">18</option>  <option value="19" name="d">19</option>
+  <option value="20" name="d">20</option>  <option value="21" name="d">21</option>
+  <option value="22" name="d">22</option>  <option value="23" name="d">23</option>
+  <option value="24" name="d">24</option>  <option value="25" name="d">25</option>
+  <option value="26" name="d">26</option>  <option value="27" name="d">27</option>
+  <option value="28" name="d">28</option>  <option value="29" name="d">29</option>
+  <option value="30" name="d">30</option>  <option value="31" name="d">31</option>
+</select> 
+<select>
+<option value="1" name="m">1</option>  <option value="2" name="m">2</option>
+<option value="3" name="m">3</option>  <option value="4" name="m">4</option>
+<option value="5" name="m">5</option>  <option value="6" name="m">6</option>
+<option value="7" name="m">7</option>  <option value="8" name="m">8</option>
+<option value="9" name="m">9</option>  <option value="10" name="m">10</option>
+<option value="11" name="m">11</option>  <option value="12" name="m">12</option>
+</select> 
+<select>
+<option value="1988" name="y">1988</option>  <option value="1989" name="y">1989</option> 
+<option value="1990" name="y">1990</option>  <option value="1991" name="y">1991</option> 
+<option value="1992" name="y">1992</option>  <option value="1993" name="y">1993</option> 
+</select> 
+</td>
+</tr>
+<tr>
+<td>Languages Known:</td>
+<td>
+<input type="checkbox" name="english" value="english" /> English
+<input type="checkbox" name="telugu" value="telugu" /> Telugu 
+<input type="checkbox" name="hindi" value="telugu" />  Hindi
+<input type="checkbox" name="tamil" value="tamil" /> Tamil 
+</td>
+</tr>
+<tr>
+<td>Address:</td>
+<td><textarea rows="4" cols="30" name="address"></textarea>  </td>
+</tr>
+<tr><td colspan="2" align="center">
+<input value="Register" type="submit" onClick="validate();" />
+</td></tr>
+</table></body></html>
+
